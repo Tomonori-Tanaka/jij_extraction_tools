@@ -7,10 +7,9 @@ import pandas as pd
 
 # global variables
 # To obtain the lattice constant (a)
-lattice_factor_keyword = "brvtyp="
-jij_detect_keyword_begin = "index   site    comp"
-jij_detect_keyword_end = "Tc (in mean field approximation)"
-bohr2ang = 0.5291772109
+LATTICE_FACTOR_KEYWORD = "brvtyp="
+JIJ_DETECT_KEYWORD = "index   site    comp"
+BOHR2ANG = 0.5291772109
 
 
 def get_compact_jij_info(line):
@@ -40,8 +39,8 @@ def get_compact_jij_info(line):
     result_list = [index, site, comp, cell, distance, jij_in_Ryd, jij_in_meV, dgn]
     return result_list
 
-def get_verbose_jij_info(line):
 
+def get_verbose_jij_info(line):
     line = line.split()
     # make each data
     pair = line[0]
@@ -52,7 +51,8 @@ def get_verbose_jij_info(line):
     jij_in_meV = line[11]
     index = line[12]
 
-def Make_df_on_site_combi(iterator):
+
+def make_df_on_site_combi(iterator):
     """
     Return a dataframe on X1-X2 combination (X1 and X2 are site names.)
 
@@ -86,4 +86,7 @@ if __name__ == "__main__":
 
     with open(args.AkaiKKR_file, mode='r', encoding='utf-8') as f:
         for line in f:
-            if
+            if JIJ_DETECT_KEYWORD in line:
+                df_jij = make_df_on_site_combi(f)
+
+    print(df_jij)
