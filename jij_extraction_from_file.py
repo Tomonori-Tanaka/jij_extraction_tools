@@ -4,6 +4,7 @@ This script extract jij values from a single output file.
 import argparse
 
 import pandas as pd
+import sys
 
 # global variables
 # To obtain the lattice constant (a)
@@ -68,10 +69,11 @@ def make_df_on_site_combi(iterator):
                                        'jij_in_meV',
                                        'dgn'])
     for line in iterator:
-        result_series = pd.Series(get_compact_jij_info(line))
-        df_jij = df_jij.append(result_series, ignore_index=True)
-        if type(line.split()[0]) is str:
+        if not line.split():
             break
+        else:
+            result_series = pd.Series(get_compact_jij_info(line), index=df_jij.columns)
+            df_jij = df_jij.append(result_series, ignore_index=True)
 
     return df_jij
 
