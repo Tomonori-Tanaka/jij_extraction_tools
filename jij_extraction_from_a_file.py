@@ -13,7 +13,7 @@ jij_detect_keyword_end = "Tc (in mean field approximation)"
 bohr2ang = 0.5291772109
 
 
-def get_all_info_on_jij_line(line):
+def get_compact_jij_info(line):
     """
     Return the list which contains all information on the jij value in a AkaiKKR output file as below:
     index   site    comp           cell           distance     J_ij      J_ij(meV)   dgn
@@ -27,7 +27,7 @@ def get_all_info_on_jij_line(line):
     :return: list
     """
     line = line.split()
-    # make each element
+    # make each data
     index = line[0]
     site = [line[1], line[2]]
     comp = [line[3], line[4]]
@@ -40,8 +40,19 @@ def get_all_info_on_jij_line(line):
     result_list = [index, site, comp, cell, distance, jij_in_Ryd, jij_in_meV, dgn]
     return result_list
 
+def get_verbose_jij_info(line):
 
-def Make_dataframe_on_site_combination(iterator):
+    line = line.split()
+    # make each data
+    pair = line[0]
+    atoms = [line[1], line[2]]
+    comps = [line[3], line[4]]
+    cell = [line[6], line[7], line[8]]
+    distance = line[10]
+    jij_in_meV = line[11]
+    index = line[12]
+
+def Make_df_on_site_combi(iterator):
     """
     Return a dataframe on X1-X2 combination (X1 and X2 are site names.)
 
@@ -57,7 +68,7 @@ def Make_dataframe_on_site_combination(iterator):
                                        'jij_in_meV',
                                        'dgn'])
     for line in iterator:
-        result_series = pd.Series(get_all_info_on_jij_line(line))
+        result_series = pd.Series(get_compact_jij_info(line))
         df_jij = df_jij.append(result_series, ignore_index=True)
         if type(line.split()[0]) is str:
             break
