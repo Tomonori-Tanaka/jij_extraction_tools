@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="372ea519-04ff-4dc6-a1a6-6b403ce65c7f" name="Changes" comment="Added get_verbose_jij_info function">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="372ea519-04ff-4dc6-a1a6-6b403ce65c7f" name="Changes" comment="Renamed" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,7 +37,28 @@
       <option name="project" value="LOCAL" />
       <updated>1637296441580</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Modified.">
+      <created>1637301862612</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1637301862612</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Modified.">
+      <created>1637301871845</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1637301871845</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Renamed">
+      <created>1637301903773</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1637301903773</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -56,6 +75,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added get_verbose_jij_info function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added get_verbose_jij_info function" />
+    <MESSAGE value="Modified." />
+    <MESSAGE value="Renamed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Renamed" />
   </component>
 </project>
