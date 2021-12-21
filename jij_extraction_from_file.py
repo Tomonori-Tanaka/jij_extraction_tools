@@ -28,14 +28,14 @@ def get_compact_jij_info(line):
     """
     line = line.split()
     # make each data
-    index = line[0]
-    site = [line[1], line[2]]
-    comp = [line[3], line[4]]
-    cell = [line[5], line[6], line[7]]
-    distance = line[8]
-    jij_in_Ryd = line[9]
-    jij_in_meV = line[10]
-    dgn = line[11]
+    index = int(line[0])
+    site = [int(line[1]), int(line[2])]
+    comp = [int(line[3]), int(line[4])]
+    cell = [float(line[5]), float(line[6]), float(line[7])]
+    distance = float(line[8])
+    jij_in_Ryd = float(line[9])
+    jij_in_meV = float(line[10])
+    dgn = int(line[11])
 
     result_list = [index, site, comp, cell, distance, jij_in_Ryd, jij_in_meV, dgn]
     return result_list
@@ -81,8 +81,11 @@ def make_df_on_site_combi(iterator):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Extract jij values from AkaiKKR output (unit of Jij is meV).')
 
-    phelp = "output file name of AkaiKKR containing jij values"
-    parser.add_argument('AkaiKKR_file', type=str, help=phelp)
+    help = "output file name of AkaiKKR containing jij values"
+    parser.add_argument('AkaiKKR_file', type=str, help=help)
+    help = "index of jij in output file"
+    parser.add_argument('jij_index', type=int, nargs='+', help=help)
+
 
     args = parser.parse_args()
 
@@ -90,5 +93,5 @@ if __name__ == "__main__":
         for line in f:
             if JIJ_DETECT_KEYWORD in line:
                 df_jij = make_df_on_site_combi(f)
-
-    print(df_jij)
+    df_jij_index_extracted = df_jij[df_jij['index'].isin(args.jij_index)]
+    print(df_jij_index_extracted['jij_in_meV'].mean())
