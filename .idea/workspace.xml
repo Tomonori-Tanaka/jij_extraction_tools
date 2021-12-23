@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="372ea519-04ff-4dc6-a1a6-6b403ce65c7f" name="Changes" comment="Modified making df function">
+    <list default="true" id="372ea519-04ff-4dc6-a1a6-6b403ce65c7f" name="Changes" comment="almost completed">
+      <change afterPath="$PROJECT_DIR$/jij_extract_dir_tree.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jij_extraction_from_file.py" beforeDir="false" afterPath="$PROJECT_DIR$/jij_extraction_from_file.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -81,7 +88,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637307034592</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="almost completed">
+      <created>1640056289444</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1640056289444</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -102,6 +116,7 @@
     <MESSAGE value="Renamed" />
     <MESSAGE value="scp output.dat as a sample output" />
     <MESSAGE value="Modified making df function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modified making df function" />
+    <MESSAGE value="almost completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="almost completed" />
   </component>
 </project>
